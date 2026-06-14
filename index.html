@@ -400,25 +400,73 @@
 </section>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!-- ABOUT — founder story, image left / text right           -->
+<!-- ABOUT — editorial founder section                        -->
 <!-- ══════════════════════════════════════════════════════════ -->
-<section class="px-container-padding py-16 bg-surface-container-low rounded-t-xl">
+<section class="about-section px-container-padding bg-surface-container-low" style="padding-top: clamp(64px, 8vw, 120px); padding-bottom: clamp(64px, 8vw, 120px);">
   <div class="max-w-7xl mx-auto">
-    <div class="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
 
-      <!-- Left: founder photo -->
-      <div class="reveal-left w-full md:w-[44%] shrink-0">
-        <div class="rounded-2xl overflow-hidden" style="box-shadow: 0 24px 64px -16px var(--shadow-primary-md);">
-          <img src="rolunk.jpg" alt="Bondor Mónika, a Kolibry Baby alapítója műhelyében" class="w-full object-cover object-top"/>
+    <!-- Eyebrow -->
+    <p class="reveal flex items-center gap-3 font-label-md text-label-md text-primary uppercase tracking-[0.14em] mb-10">
+      <span class="block w-8 h-px bg-primary shrink-0" aria-hidden="true"></span>
+      A készítő
+    </p>
+
+    <!-- Main grid: image left, content right -->
+    <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+
+      <!-- LEFT: stacked image + stat card -->
+      <div class="reveal-left w-full lg:w-[42%] shrink-0">
+        <div class="relative">
+          <!-- Photo -->
+          <div class="rounded-3xl overflow-hidden img-zoom" style="box-shadow: 0 32px 80px -20px var(--shadow-primary-md);">
+            <img src="rolunk.jpg" alt="Bondor Mónika, a Kolibry Baby alapítója műhelyében" class="w-full object-cover object-top" style="aspect-ratio: 4/5;"/>
+          </div>
+          <!-- Floating stat badge bottom-right -->
+          <div class="absolute -bottom-6 -right-4 md:right-0 bg-primary text-on-primary rounded-2xl px-5 py-4 text-center" style="box-shadow: 0 16px 40px -8px var(--shadow-primary-badge);">
+            <p class="font-display-lg text-display-lg-mobile" style="font-size: 32px; line-height: 1; font-weight: 700;">8+</p>
+            <p class="font-label-md text-label-md opacity-80 mt-1" style="font-size: 11px; letter-spacing: 0.1em;">év tapasztalat</p>
+          </div>
         </div>
       </div>
 
-      <!-- Right: story -->
-      <div class="w-full md:w-[56%] flex flex-col gap-6">
-        <h2 class="reveal font-headline-md text-headline-md text-on-surface" style="--delay: 100ms;">Ki áll a Kolibry Baby mögött?</h2>
-        <p class="reveal text-body-lg font-body-lg text-on-surface-variant" style="--delay: 200ms; max-width: 52ch;">8 éve készítem kézzel a Kolibry Baby termékeit Baján. Hiszek abban, hogy a babák csak olyan anyagokat érdemelnek, amelyeket én is nyugodt szívvel választanék a saját családom számára.</p>
-      </div>
+      <!-- RIGHT: story + stats row + quote -->
+      <div class="w-full lg:w-[58%] flex flex-col gap-8 lg:pt-4" style="padding-top: 0;">
 
+        <h2 class="reveal font-headline-md text-on-surface" style="font-size: clamp(28px, 3.6vw, 44px); line-height: 1.1; font-weight: 700; --delay: 80ms; text-wrap: balance;">Ki áll a Kolibry Baby mögött?</h2>
+
+        <p class="reveal text-body-lg font-body-lg text-on-surface-variant" style="--delay: 160ms; max-width: 50ch; line-height: 1.75;">Bondor Mónika vagyok, Baja szívéből. 8 éve varrom kézzel a Kolibry Baby termékeit — minden egyes darabot ugyanolyan gondossággal, mintha a saját gyermekem számára készíteném.</p>
+
+        <!-- Pull quote -->
+        <blockquote class="reveal relative pl-5" style="--delay: 240ms; border-left: 3px solid var(--color-logo-bg);">
+          <p class="text-body-lg font-body-lg text-on-surface italic" style="line-height: 1.7;">&#8220;Hiszem, hogy a babák csak olyan anyagokat érdemelnek, amelyeket én is nyugodt szívvel választanék a saját családom számára.&#8221;</p>
+          <cite class="block mt-3 font-label-md text-label-md text-primary not-italic">— Bondor Mónika, alapító</cite>
+        </blockquote>
+
+        <!-- Stats row -->
+        <div class="reveal grid grid-cols-3 gap-4 pt-2" style="--delay: 320ms;">
+          <div class="flex flex-col gap-1 p-4 rounded-2xl bg-surface-container-lowest" style="box-shadow: 0 4px 16px -4px var(--shadow-primary-soft);">
+            <span class="font-headline-sm text-headline-sm text-primary font-bold">Baja</span>
+            <span class="font-caption text-caption text-on-surface-variant">Helyi műhely</span>
+          </div>
+          <div class="flex flex-col gap-1 p-4 rounded-2xl bg-surface-container-lowest" style="box-shadow: 0 4px 16px -4px var(--shadow-primary-soft);">
+            <span class="font-headline-sm text-headline-sm text-primary font-bold">100%</span>
+            <span class="font-caption text-caption text-on-surface-variant">Kézzel varva</span>
+          </div>
+          <div class="flex flex-col gap-1 p-4 rounded-2xl bg-surface-container-lowest" style="box-shadow: 0 4px 16px -4px var(--shadow-primary-soft);">
+            <span class="font-headline-sm text-headline-sm text-primary font-bold">Bio</span>
+            <span class="font-caption text-caption text-on-surface-variant">OEKO-TEX anyag</span>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="reveal" style="--delay: 400ms;">
+          <a href="https://www.meska.hu/shop/Kolibribaby" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2 bg-primary text-on-primary px-7 py-3.5 rounded-full font-label-md text-label-md shadow-lg shadow-primary/25">
+            Nézd meg a termékeket
+            <span class="material-symbols-outlined arrow-icon" style="font-size: 18px;" aria-hidden="true">arrow_forward</span>
+          </a>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
