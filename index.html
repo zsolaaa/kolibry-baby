@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="hu"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kolibry Baby | Kézzel készített textiltermékek</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Quicksand:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#f5d9c8",
+                      "on-secondary-fixed-variant": "#5e4035",
+                      "inverse-on-surface": "#ffe8d8",
+                      "surface": "#fff8f5",
+                      "secondary": "#7a5c4a",
+                      "primary": "#8b4a2e",
+                      "on-primary-container": "#5a2810",
+                      "tertiary-container": "#c8a87a",
+                      "outline-variant": "#d4b8a4",
+                      "surface-variant": "#f5d4c0",
+                      "secondary-container": "#f5d9c8",
+                      "tertiary": "#755d3a",
+                      "surface-bright": "#fff8f5",
+                      "on-primary-fixed-variant": "#6e3518",
+                      "tertiary-fixed": "#f0dcc0",
+                      "primary-fixed-dim": "#f0b090",
+                      "on-tertiary-container": "#4a3618",
+                      "on-primary-fixed": "#2e1200",
+                      "on-secondary-container": "#6a4a38",
+                      "outline": "#8b7060",
+                      "on-tertiary-fixed": "#2a1c00",
+                      "error-container": "#ffdad6",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#524038",
+                      "on-error": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#ffdcc8",
+                      "on-surface": "#231410",
+                      "on-tertiary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "primary-container": "#e8a882",
+                      "background": "#fff8f5",
+                      "surface-container-highest": "#f5d4c0",
+                      "inverse-surface": "#3d2418",
+                      "surface-container-high": "#fce0cf",
+                      "tertiary-fixed-dim": "#d4c0a0",
+                      "surface-container": "#ffede0",
+                      "error": "#ba1a1a",
+                      "inverse-primary": "#f0b090",
+                      "surface-container-low": "#fff5ed",
+                      "on-tertiary-fixed-variant": "#5a4425",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#231410",
+                      "on-secondary-fixed": "#2a1500",
+                      "surface-tint": "#8b4a2e",
+                      "surface-dim": "#f0d0bb",
+                      "secondary-fixed-dim": "#d4b8a4"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "grid-gutter": "24px",
+                      "base": "8px",
+                      "section-gap-mobile": "64px",
+                      "container-padding": "32px",
+                      "section-gap-desktop": "120px"
+              },
+              "fontFamily": {
+                      "body-md": ["Plus Jakarta Sans"],
+                      "caption": ["Plus Jakarta Sans"],
+                      "headline-md": ["Quicksand"],
+                      "display-lg": ["Quicksand"],
+                      "display-lg-mobile": ["Quicksand"],
+                      "headline-sm": ["Quicksand"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "label-md": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        /* Hallmark · macrostructure: Atelier · tone: soft · anchor hue: blush */
+
+        html, body { overflow-x: clip; }
+
+        :root {
+            --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+            --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+            /* Shadow tokens — replaces inline rgba() throughout */
+            --shadow-primary-soft: rgba(139, 74, 46, 0.06);
+            --shadow-primary-md: rgba(139, 74, 46, 0.22);
+            --shadow-primary-badge: rgba(139, 74, 46, 0.40);
+            --shadow-chip: rgba(139, 74, 46, 0.10);
+            /* Color tokens — replaces inline oklch() in style attrs */
+            --color-hero-bg: oklch(97% 0.018 40);
+            --color-chip-bg: oklch(100% 0.006 40 / 0.95);
+            --color-frame-border: oklch(97% 0.018 40);
+            --color-scroll-cue: oklch(48% 0.025 40);
+            /* SVG logo — replaces hardcoded hex in fill attrs */
+            --color-logo-bg: #ffdcc8;
+            --color-logo-fg: #8b4a2e;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .cloud-shadow { box-shadow: 0 10px 40px -10px var(--shadow-primary-soft); }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+
+        /* Arrow icon — CSS-managed hover, guarded for pointer devices */
+        .arrow-icon {
+            transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+            display: inline-block;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .img-zoom:hover { transform: scale(1.055); }
+            .card-lift:hover { transform: translateY(-6px); }
+            .card-lift:hover .arrow-icon,
+            .hover-arrow:hover .arrow-icon { transform: translateX(6px); }
+            .btn-primary:hover { transform: scale(1.02); }
+        }
+        .img-zoom { transition: transform 330ms cubic-bezier(0.23, 1, 0.32, 1); }
+        .card-lift { transition: transform 250ms cubic-bezier(0.23, 1, 0.32, 1); }
+        .card-lift:active { transform: scale(0.99); transition-duration: 100ms; }
+        .btn-primary {
+            transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 160ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .btn-primary:active { transform: scale(0.97); transition-duration: 100ms; }
+
+        @keyframes hero-scroll-pulse {
+            0%, 100% { transform: translateY(0); opacity: 0.45; }
+            50% { transform: translateY(6px); opacity: 0.75; }
+        }
+        .hero-scroll-cue { animation: hero-scroll-pulse 2.4s ease-in-out infinite; }
+
+        /* ── Hero entry animations ── */
+        @keyframes hero-fade-up {
+            from { opacity: 0; transform: translateY(22px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes hero-scale-in {
+            from { opacity: 0; transform: scale(0.94); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+        @keyframes hero-image-in {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .hero-fade-up  { animation: hero-fade-up  700ms cubic-bezier(0.23, 1, 0.32, 1) both; }
+        .hero-image-in { animation: hero-image-in 900ms cubic-bezier(0.23, 1, 0.32, 1) both; }
+        .hero-scale-in { animation: hero-scale-in 600ms cubic-bezier(0.23, 1, 0.32, 1) both; }
+        .hero-d0 { animation-delay:   0ms; }
+        .hero-d1 { animation-delay: 100ms; }
+        .hero-d2 { animation-delay: 200ms; }
+        .hero-d3 { animation-delay: 300ms; }
+        .hero-d4 { animation-delay: 380ms; }
+        .hero-d5 { animation-delay: 450ms; }
+        .hero-d6 { animation-delay: 550ms; }
+
+        /* ── Scroll-reveal (IntersectionObserver driven) ── */
+        .reveal, .reveal-left {
+            opacity: 0;
+            transition: opacity 650ms cubic-bezier(0.23, 1, 0.32, 1),
+                        transform 650ms cubic-bezier(0.23, 1, 0.32, 1);
+            transition-delay: var(--delay, 0ms);
+        }
+        .reveal      { transform: translateY(22px); }
+        .reveal-left { transform: translateX(-28px); }
+        .reveal.visible      { opacity: 1; transform: translateY(0); }
+        .reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+        /* Category grid tokens */
+        :root {
+            --category-overlay: linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 55%);
+            --category-meska-bg: oklch(25% 0.015 15);
+        }
+        .category-overlay { background: var(--category-overlay); }
+        .category-meska { background: var(--category-meska-bg); }
+        .category-card { transition: transform 250ms cubic-bezier(0.23, 1, 0.32, 1); }
+        .category-card:focus-visible {
+            outline: 3px solid oklch(64% 0.12 15);
+            outline-offset: 3px;
+            border-radius: 0.75rem;
+        }
+        .category-label { transition: gap 200ms cubic-bezier(0.23, 1, 0.32, 1); display: inline-flex; align-items: center; gap: 0; }
+        .category-label .cat-arrow { opacity: 0; transform: translateX(-4px); transition: opacity 180ms ease-out, transform 180ms cubic-bezier(0.23, 1, 0.32, 1); }
+        @media (hover: hover) and (pointer: fine) {
+            .category-card:hover .category-label { gap: 6px; }
+            .category-card:hover .cat-arrow { opacity: 1; transform: translateX(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+<!-- Skip to content — keyboard / screen-reader nav -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-primary focus:text-on-primary focus:px-4 focus:py-2 focus:rounded-full focus:font-label-md focus:text-label-md">Ugrás a tartalomhoz</a>
+
+<!-- Header — boutique nav (wordmark left, links right, no duplicate CTA button) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-container-padding py-4 max-w-7xl mx-auto glass-nav bg-surface/80 shadow-sm" style="transition: padding 150ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1);">
+  <div class="flex items-center gap-2.5">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <ellipse cx="14" cy="14" rx="13" ry="13" fill="var(--color-logo-bg)"/>
+      <path d="M20 9c-1.5 0-4 1-5.5 3.5C13 15 11 17 8 17.5c1 1.5 3.5 2 5.5 1C16.5 17.5 19 15 20.5 12c.5-1 .5-3-0.5-3z" fill="var(--color-logo-fg)"/>
+      <path d="M8 18c2-0.5 4-2 5-4" stroke="var(--color-logo-fg)" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="19.5" cy="9.5" r="1" fill="var(--color-logo-fg)"/>
+    </svg>
+    <span class="font-headline-sm text-headline-sm font-semibold text-primary tracking-tight">Kolibry Baby</span>
+  </div>
+  <div class="flex items-center gap-6">
+    <nav class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+      <a class="text-primary border-b-2 border-primary pb-1 transition-colors" href="#">Termékek</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Rólunk</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Kapcsolat</a>
+    </nav>
+    <button class="md:hidden text-primary" aria-label="Menü megnyitása">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main-content" class="pt-24">
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- HERO — flat tinted surface, no decoration blobs           -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="relative overflow-hidden flex items-center" style="min-height: 92vh; background: var(--color-hero-bg);">
+
+  <div class="max-w-7xl mx-auto w-full px-container-padding py-20 flex flex-col lg:flex-row items-center gap-14 lg:gap-0">
+
+    <!-- LEFT: Text (54%) -->
+    <div class="w-full lg:w-[54%] flex flex-col gap-8 z-10 lg:pr-10">
+
+      <!-- Tagline — hero content, not a section eyebrow -->
+      <p class="hero-fade-up hero-d0 flex items-center gap-3 font-label-md text-label-md text-primary uppercase tracking-[0.14em]">
+        <span class="block w-8 h-px bg-primary shrink-0" aria-hidden="true"></span>
+        Kézzel készített · Bababarát anyagok
+      </p>
+
+      <!-- Headline -->
+      <h1 class="hero-fade-up hero-d1" style="font-family: Quicksand; font-size: clamp(42px, 5.8vw, 72px); font-weight: 700; line-height: 1.05; letter-spacing: -0.025em; overflow-wrap: anywhere; min-width: 0;">
+        <span class="text-on-surface block">Puha kezdetek,</span>
+        <span class="text-primary block">egyedi minőség.</span>
+      </h1>
+
+      <!-- Body copy -->
+      <p class="hero-fade-up hero-d2 text-body-lg font-body-lg text-on-surface-variant max-w-[42ch]">
+        Egyedi mintákkal készült babafészkek és babakiegészítők, amelyek máshol nem kaphatók. Kézzel készítve Baján, 8 év tapasztalattal.
+      </p>
+
+      <!-- CTAs -->
+      <div class="hero-fade-up hero-d3 flex flex-wrap items-center gap-4">
+        <a href="https://www.meska.hu/shop/Kolibribaby" target="_blank" rel="noopener" class="btn-primary bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md shadow-lg shadow-primary/25">
+          Webshop
+        </a>
+        <a href="#" class="hover-arrow flex items-center gap-2 px-4 py-4 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer">
+          Rólunk
+          <span class="material-symbols-outlined arrow-icon" style="font-size: 18px;">arrow_forward</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: Image panel (46%) — clamp() height for responsive behaviour -->
+    <div class="hero-image-in hero-d1 w-full lg:w-[46%] relative" style="height: clamp(320px, 45vw, 580px);">
+
+      <!-- Main image — LCP, fetchpriority required -->
+      <div class="absolute rounded-3xl overflow-hidden" style="top: 0; left: 20px; right: 0; bottom: 40px; box-shadow: 0 32px 80px -20px var(--shadow-primary-md);">
+        <img src="hero.png" alt="Kézzel készített babatextíliák természetes anyagokból" class="w-full h-full object-cover" fetchpriority="high"/>
+      </div>
+
+      <!-- Secondary image -->
+      <div class="hero-scale-in hero-d4 absolute rounded-2xl overflow-hidden" style="bottom: 0; left: 0; width: 154px; height: 196px; border: 5px solid var(--color-frame-border); box-shadow: 0 16px 48px -8px var(--shadow-primary-md);">
+        <img src="ovodaszett.jpeg" alt="Óvodai textil szett" class="w-full h-full object-cover"/>
+      </div>
+
+      <!-- Floating chip -->
+      <div class="hero-scale-in hero-d5 absolute flex items-center gap-2 rounded-full px-4 py-2.5 border border-outline-variant/20" style="top: 20px; right: 12px; background: var(--color-chip-bg); box-shadow: 0 8px 24px -4px var(--shadow-chip);">
+        <span class="material-symbols-outlined text-primary" style="font-size: 15px;">eco</span>
+        <span class="font-label-md text-label-md text-on-surface" style="font-size: 12px; letter-spacing: 0.04em;">Természetes anyagok</span>
+      </div>
+
+      <!-- Floating badge -->
+      <div class="hero-scale-in hero-d6 absolute rounded-2xl px-4 py-3 text-center bg-primary" style="bottom: 215px; right: 12px; box-shadow: 0 12px 32px -6px var(--shadow-primary-badge);">
+        <p class="font-label-md text-label-md text-on-primary" style="font-size: 12px; line-height: 1.3;">Kézzel varva</p>
+        <p class="font-caption text-caption text-on-primary/75 mt-0.5">Bajáról, szeretettel</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5" aria-hidden="true">
+    <span style="font-family: 'Plus Jakarta Sans'; font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-scroll-cue); opacity: 0.5;">Görgessen</span>
+    <span class="material-symbols-outlined hero-scroll-cue" style="font-size: 20px; color: var(--color-scroll-cue);">keyboard_arrow_down</span>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- FEATURES — editorial 2-column (replaces 4-icon grid)     -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="px-container-padding py-16">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
+
+      <!-- Left: editorial statement -->
+      <div class="lg:w-[38%] flex flex-col justify-center gap-6 lg:py-4">
+        <h2 class="reveal font-headline-md text-headline-md text-on-surface" style="font-size: clamp(26px, 3.2vw, 40px); line-height: 1.15; overflow-wrap: anywhere;">Minden darab egy ígéret</h2>
+        <p class="reveal text-body-lg font-body-lg text-on-surface-variant" style="--delay: 80ms;">Bajai műhelyünkben nem gyártunk sorozatban. Minden termék gondosan megvarrt, egyedi alkotás, amelybe belefér a türelem és a több éves tapasztalat.</p>
+        <a href="#" class="reveal hover-arrow inline-flex items-center gap-2 font-label-md text-label-md text-primary" style="--delay: 160ms;">
+          Rólunk bővebben <span class="material-symbols-outlined arrow-icon" style="font-size: 18px;">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Right: vertical feature list with rule separators -->
+      <div class="lg:w-[62%] flex flex-col divide-y divide-outline-variant/25">
+        <div class="reveal py-6 flex gap-5 items-start" style="--delay: 60ms;">
+          <span class="material-symbols-outlined text-primary shrink-0 mt-0.5" style="font-size: 22px;">volunteer_activism</span>
+          <div class="flex flex-col gap-1">
+            <h3 class="font-label-md text-label-md text-on-surface">Kézzel készített</h3>
+            <p class="text-body-md font-body-md text-on-surface-variant">Minden darab egyedileg, szeretettel és odafigyeléssel készül bajai műhelyünkben.</p>
+          </div>
+        </div>
+        <div class="reveal py-6 flex gap-5 items-start" style="--delay: 130ms;">
+          <span class="material-symbols-outlined text-primary shrink-0 mt-0.5" style="font-size: 22px;">eco</span>
+          <div class="flex flex-col gap-1">
+            <h3 class="font-label-md text-label-md text-on-surface">Minőségi anyagok</h3>
+            <p class="text-body-md font-body-md text-on-surface-variant">Kizárólag bababarát, OEKO-TEX minősítésű természetes alapanyagokat használunk.</p>
+          </div>
+        </div>
+        <div class="reveal py-6 flex gap-5 items-start" style="--delay: 200ms;">
+          <span class="material-symbols-outlined text-primary shrink-0 mt-0.5" style="font-size: 22px;">palette</span>
+          <div class="flex flex-col gap-1">
+            <h3 class="font-label-md text-label-md text-on-surface">Egyedi minták</h3>
+            <p class="text-body-md font-body-md text-on-surface-variant">Egyedi minták és összeállítások, amelyek máshol nem kaphatók.</p>
+          </div>
+        </div>
+        <div class="reveal py-6 flex gap-5 items-start" style="--delay: 270ms;">
+          <span class="material-symbols-outlined text-primary shrink-0 mt-0.5" style="font-size: 22px;">storefront</span>
+          <div class="flex flex-col gap-1">
+            <h3 class="font-label-md text-label-md text-on-surface">Bajai üzlet</h3>
+            <p class="text-body-md font-body-md text-on-surface-variant">Személyesen is megnézheted és megtapinthatod termékeinket helyi boltunkban.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- ABOUT — founder story, image left / text right           -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="px-container-padding py-16 bg-surface-container-low rounded-t-xl">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
+
+      <!-- Left: founder photo -->
+      <div class="reveal-left w-full md:w-[44%] shrink-0">
+        <div class="rounded-2xl overflow-hidden" style="box-shadow: 0 24px 64px -16px var(--shadow-primary-md);">
+          <img src="rolunk.jpg" alt="Bondor Mónika, a Kolibry Baby alapítója műhelyében" class="w-full object-cover object-top"/>
+        </div>
+      </div>
+
+      <!-- Right: story -->
+      <div class="w-full md:w-[56%] flex flex-col gap-6">
+        <h2 class="reveal font-headline-md text-headline-md text-on-surface" style="--delay: 100ms;">Ki áll a Kolibry Baby mögött?</h2>
+        <p class="reveal text-body-lg font-body-lg text-on-surface-variant" style="--delay: 200ms; max-width: 52ch;">8 éve készítem kézzel a Kolibry Baby termékeit Baján. Hiszek abban, hogy a babák csak olyan anyagokat érdemelnek, amelyeket én is nyugodt szívvel választanék a saját családom számára.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- CATEGORIES — 2×3 image grid with overlay labels          -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="px-container-padding py-section-gap-desktop bg-surface-container-low">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-12">
+      <h2 class="reveal font-headline-md text-headline-md text-on-surface">Termékkategóriáink</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+
+      <!-- Tipegő hálózsák -->
+      <a href="#" class="reveal category-card group relative overflow-hidden rounded-xl block" style="aspect-ratio: 4/3; --delay: 0ms;">
+        <img class="img-zoom w-full h-full object-cover" loading="lazy" src="tipego_halozsak-768x1024.jpeg" alt="Tipegő hálózsák"/>
+        <div class="category-overlay absolute inset-0"></div>
+        <span class="category-label absolute bottom-5 left-5 text-white font-headline-sm text-headline-sm drop-shadow-md">Tipegő hálózsák<span class="cat-arrow material-symbols-outlined" style="font-size:22px;">arrow_forward</span></span>
+      </a>
+
+      <!-- Babafészkek -->
+      <a href="#" class="reveal category-card group relative overflow-hidden rounded-xl block" style="aspect-ratio: 4/3; --delay: 70ms;">
+        <img class="img-zoom w-full h-full object-cover" loading="lazy" src="babafészek.jpeg" alt="Babafészkek"/>
+        <div class="category-overlay absolute inset-0"></div>
+        <span class="category-label absolute bottom-5 left-5 text-white font-headline-sm text-headline-sm drop-shadow-md">Babafészkek<span class="cat-arrow material-symbols-outlined" style="font-size:22px;">arrow_forward</span></span>
+      </a>
+
+      <!-- Pólyák -->
+      <a href="#" class="reveal category-card group relative overflow-hidden rounded-xl block" style="aspect-ratio: 4/3; --delay: 140ms;">
+        <img class="img-zoom w-full h-full object-cover" loading="lazy" src="polyák.jpeg" alt="Pólyák"/>
+        <div class="category-overlay absolute inset-0"></div>
+        <span class="category-label absolute bottom-5 left-5 text-white font-headline-sm text-headline-sm drop-shadow-md">Pólyák<span class="cat-arrow material-symbols-outlined" style="font-size:22px;">arrow_forward</span></span>
+      </a>
+
+      <!-- Óvodai textil szett -->
+      <a href="#" class="reveal category-card group relative overflow-hidden rounded-xl block" style="aspect-ratio: 4/3; --delay: 210ms;">
+        <img class="img-zoom w-full h-full object-cover object-top" loading="lazy" src="ovistarolo.jpeg" alt="Óvodai textil szett"/>
+        <div class="category-overlay absolute inset-0"></div>
+        <span class="category-label absolute bottom-5 left-5 text-white font-headline-sm text-headline-sm drop-shadow-md">Óvodai textil szett<span class="cat-arrow material-symbols-outlined" style="font-size:22px;">arrow_forward</span></span>
+      </a>
+
+      <!-- Egyedi pólók -->
+      <a href="#" class="reveal category-card group relative overflow-hidden rounded-xl block" style="aspect-ratio: 4/3; --delay: 280ms;">
+        <img class="img-zoom w-full h-full object-cover" loading="lazy" src="egyedipolok.jpeg" alt="Egyedi pólók"/>
+        <div class="category-overlay absolute inset-0"></div>
+        <span class="category-label absolute bottom-5 left-5 text-white font-headline-sm text-headline-sm drop-shadow-md">Egyedi pólók<span class="cat-arrow material-symbols-outlined" style="font-size:22px;">arrow_forward</span></span>
+      </a>
+
+      <!-- További termékek a Meskán -->
+      <a href="https://meska.hu" target="_blank" rel="noopener" class="reveal category-card category-meska group relative overflow-hidden rounded-xl flex items-center justify-center" style="aspect-ratio: 4/3; --delay: 350ms;">
+        <img src="olelonyuszi.png" alt="Kolibry Baby figura" class="h-32 w-32 object-contain opacity-90 relative z-10"/>
+        <div class="category-overlay absolute inset-0"></div>
+        <span class="category-label absolute bottom-5 left-5 text-white font-headline-sm text-headline-sm drop-shadow-md">További termékek a Meskán!<span class="cat-arrow material-symbols-outlined" style="font-size:22px;">open_in_new</span></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- TESTIMONIALS — staggered layout, left heading, no eyebrow -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="px-container-padding py-section-gap-desktop bg-surface-container">
+  <div class="max-w-7xl mx-auto">
+    <!-- Left-aligned heading, no eyebrow -->
+    <div class="mb-12">
+      <h2 class="reveal font-headline-md text-headline-md text-on-surface">Vásárlóink véleménye</h2>
+    </div>
+    <!-- Staggered 5-col grid: 2 compact left + 1 featured right -->
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-grid-gutter items-start">
+
+      <!-- Left column: 2 compact stacked -->
+      <div class="md:col-span-2 flex flex-col gap-grid-gutter">
+        <div class="reveal bg-surface-container-lowest p-6 rounded-lg cloud-shadow flex flex-col gap-3" style="--delay: 80ms;">
+          <div class="flex gap-0.5 text-primary">
+            <span class="material-symbols-outlined filled" style="font-size: 16px;">star</span>
+            <span class="material-symbols-outlined filled" style="font-size: 16px;">star</span>
+            <span class="material-symbols-outlined filled" style="font-size: 16px;">star</span>
+            <span class="material-symbols-outlined filled" style="font-size: 16px;">star</span>
+            <span class="material-symbols-outlined filled" style="font-size: 16px;">star</span>
+          </div>
+          <p class="text-body-md font-body-md italic text-on-surface-variant">"Gyors és kedves kiszolgálás, szuper termék, mindenkinek ajánlom :)"</p>
+          <span class="font-label-md text-label-md text-on-surface">Réka Bognár-Szurmay</span>
+        </div>
+        <div class="reveal bg-surface-container-lowest p-6 rounded-lg cloud-shadow flex flex-col gap-3" style="--delay: 180ms;">
+          <div class="flex gap-0.5 text-primary">
+            <span class="material-symbols-outlined filled" style="font-size: 16px;">star</span>
+            <span class="material-symbols-outlined filled" style="font-size: 16px;">star</span>
+            <span class="material-symbols-outlined filled" style="font-size: 16px;">star</span>
+            <span class="material-symbols-outlined filled" style="font-size: 16px;">star</span>
+            <span class="material-symbols-outlined filled" style="font-size: 16px;">star</span>
+          </div>
+          <p class="text-body-md font-body-md italic text-on-surface-variant">"Kifogástalan a rendelés menete és a tipegő minősége is. Kedves eladó, segítőkész. 1 héten belül elkészült a tipegő hálózsákunk. Ajánlom Mindenkinek!!"</p>
+          <span class="font-label-md text-label-md text-on-surface">Rimai-Minorits Dorottya</span>
+        </div>
+      </div>
+
+      <!-- Right column: 1 featured -->
+      <div class="reveal md:col-span-3" style="--delay: 130ms;">
+        <div class="bg-primary/5 border border-primary/10 p-10 rounded-lg cloud-shadow flex flex-col gap-5" style="min-height: 100%;">
+          <span class="material-symbols-outlined text-primary-container !text-6xl opacity-35">format_quote</span>
+          <div class="flex gap-0.5 text-primary">
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+          </div>
+          <p class="text-body-lg font-body-lg italic text-on-surface-variant">"Segítőkész, kedves, aranyos és a tipegő minősége kiváló, gyönyörű munka!! Az biztos, hogy nem utoljára rendeltem Tőletek. Imádom én is és a kislányom is!"</p>
+          <span class="font-label-md text-label-md text-on-surface">Majoros Noémi</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<!-- Footer -->
+<footer class="w-full px-container-padding py-16 bg-surface-container rounded-t-lg">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+
+    <!-- Col 1: Brand -->
+    <div class="flex flex-col gap-5">
+      <div class="flex items-center gap-2.5">
+        <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <ellipse cx="14" cy="14" rx="13" ry="13" fill="var(--color-logo-bg)"/>
+          <path d="M20 9c-1.5 0-4 1-5.5 3.5C13 15 11 17 8 17.5c1 1.5 3.5 2 5.5 1C16.5 17.5 19 15 20.5 12c.5-1 .5-3-0.5-3z" fill="var(--color-logo-fg)"/>
+          <path d="M8 18c2-0.5 4-2 5-4" stroke="var(--color-logo-fg)" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="19.5" cy="9.5" r="1" fill="var(--color-logo-fg)"/>
+        </svg>
+        <span class="font-headline-sm text-headline-sm font-semibold text-primary">Kolibry Baby</span>
+      </div>
+      <p class="text-on-surface-variant font-body-md">Kézzel varrt textíliák a legkisebbektől az óvodásokig. Szeretettel, Bajáról.</p>
+      <div class="flex gap-3">
+        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Col 2: Navigation -->
+    <div class="flex flex-col gap-4">
+      <h5 class="font-label-md text-label-md text-primary uppercase tracking-[0.12em]">Hasznos linkek</h5>
+      <nav class="flex flex-col gap-2 font-body-md">
+        <a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Termékeink</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Rólunk</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Galéria</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Szállítási információk</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Adatvédelmi nyilatkozat</a>
+      </nav>
+    </div>
+
+    <!-- Col 3: Contact -->
+    <div class="flex flex-col gap-4">
+      <h5 class="font-label-md text-label-md text-primary uppercase tracking-[0.12em]">Kapcsolat</h5>
+      <div class="flex flex-col gap-3 text-on-surface-variant font-body-md">
+        <p class="font-semibold text-on-surface">Bondor Mónika e.v.</p>
+        <p class="flex items-start gap-2">
+          <span class="material-symbols-outlined text-primary shrink-0" style="font-size:18px; margin-top:2px;">location_on</span>
+          6500 Baja, Kossuth Lajos utca 11.
+        </p>
+        <a href="tel:+36308856833" class="flex items-center gap-2 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-primary shrink-0" style="font-size:18px;">call</span>
+          +36 30 885 6833
+        </a>
+        <a href="mailto:kolibribaby2018@gmail.com" class="flex items-center gap-2 hover:text-primary transition-colors break-all">
+          <span class="material-symbols-outlined text-primary shrink-0" style="font-size:18px;">mail</span>
+          kolibribaby2018@gmail.com
+        </a>
+      </div>
+      <p class="mt-4 text-caption font-caption text-on-surface-variant opacity-70">© 2026 Kolibry Baby. Minden jog fenntartva.</p>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4', 'shadow-sm');
+            } else {
+                header.classList.add('py-4', 'shadow-sm');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+
+        /* ── Scroll-reveal observer ── */
+        (function () {
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+
+            document.querySelectorAll('.reveal, .reveal-left').forEach(function (el) {
+                observer.observe(el);
+            });
+        })();
+    </script>
+</body></html>
